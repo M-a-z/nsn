@@ -1,0 +1,121 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADDRADD_CMD	src/nsn_commandlauncher.h	59;"	d
+ADDRDEL_CMD	src/nsn_commandlauncher.h	58;"	d
+BABBLER_VERBOSITY	src/nsn_printfuncs.h	/^    BABBLER_VERBOSITY=0,$/;"	e	enum:Everbosity
+CC	Makefile	/^CC=gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-Wall -ggdb$/;"	m
+DEFAULT_MULTICAST_GRPS	src/NetworkStateNotifier.c	67;"	d	file:
+Everbosity	src/nsn_printfuncs.h	/^typedef enum Everbosity$/;"	g
+Everbosity	src/nsn_printfuncs.h	/^}Everbosity;$/;"	t	typeref:enum:Everbosity
+G_aadd_cmds	src/nsn_commandlauncher.c	/^static SNSNcommandlist G_aadd_cmds;$/;"	v	file:
+G_adel_cmds	src/nsn_commandlauncher.c	/^static SNSNcommandlist G_adel_cmds;$/;"	v	file:
+G_exename	src/NetworkStateNotifier.c	/^const char *G_exename="netPoller";$/;"	v
+G_ladd_cmds	src/nsn_commandlauncher.c	/^static SNSNcommandlist G_ladd_cmds;$/;"	v	file:
+G_ldel_cmds	src/nsn_commandlauncher.c	/^static SNSNcommandlist G_ldel_cmds;$/;"	v	file:
+G_printdevices	src/nsn_printfuncs.c	/^static printdev *G_printdevices[MAX_SUPPORTED_PRINT_DEVICES]={NULL,NULL};$/;"	v	file:
+G_radd_cmds	src/nsn_commandlauncher.c	/^static SNSNcommandlist G_radd_cmds;$/;"	v	file:
+G_rdel_cmds	src/nsn_commandlauncher.c	/^static SNSNcommandlist G_rdel_cmds;$/;"	v	file:
+G_starttime	src/nsn_printfuncs.c	/^static struct timespec G_starttime={$/;"	v	typeref:struct:timespec	file:
+G_verbositylimit	src/nsn_printfuncs.c	/^static Everbosity G_verbositylimit=NORMAL_VERBOSITY;$/;"	v	file:
+HELP_PRINT	src/NetworkStateNotifier.c	71;"	d	file:
+LDFLAGS	Makefile	/^LDFLAGS=-lrt $/;"	m
+LINKADD_CMD	src/nsn_commandlauncher.h	60;"	d
+LINKDEL_CMD	src/nsn_commandlauncher.h	62;"	d
+MAINTAINERMAIL	src/NetworkStateNotifier.c	63;"	d	file:
+MAX_SUPPORTED_PRINT_DEVICES	src/nsn_printfuncs.h	45;"	d
+MAX_VERBOSITY	src/nsn_printfuncs.h	/^    MAX_VERBOSITY=100$/;"	e	enum:Everbosity
+NLM_TYPESTRING	src/NetworkStateNotifier.c	198;"	d	file:
+NORMAL_VERBOSITY	src/nsn_printfuncs.h	/^    NORMAL_VERBOSITY=5,$/;"	e	enum:Everbosity
+NSN_COMMANDLAUNCHER_H	src/nsn_commandlauncher.h	42;"	d
+NSN_PRINTFUNCS_H	src/nsn_printfuncs.h	41;"	d
+NSN_cmd_order	src/nsn_commandlauncher.h	/^typedef const enum NSN_cmd_order$/;"	g
+NSN_cmd_order	src/nsn_commandlauncher.h	/^}NSN_cmd_order;$/;"	t	typeref:enum:NSN_cmd_order
+NSN_cmd_order_adda	src/nsn_commandlauncher.h	/^    NSN_cmd_order_adda,$/;"	e	enum:NSN_cmd_order
+NSN_cmd_order_addd	src/nsn_commandlauncher.h	/^    NSN_cmd_order_addd,$/;"	e	enum:NSN_cmd_order
+NSN_cmd_order_last	src/nsn_commandlauncher.h	/^    NSN_cmd_order_last$/;"	e	enum:NSN_cmd_order
+NSN_cmd_order_lina	src/nsn_commandlauncher.h	/^    NSN_cmd_order_lina,$/;"	e	enum:NSN_cmd_order
+NSN_cmd_order_rta	src/nsn_commandlauncher.h	/^    NSN_cmd_order_rta,$/;"	e	enum:NSN_cmd_order
+NSN_cmd_order_rtd	src/nsn_commandlauncher.h	/^    NSN_cmd_order_rtd = 0,$/;"	e	enum:NSN_cmd_order
+NSNdetailPrint	src/nsn_printfuncs.h	63;"	d
+NSNnormalPrint	src/nsn_printfuncs.h	64;"	d
+NSNpanicPrint	src/nsn_printfuncs.h	65;"	d
+NSNprint	src/nsn_printfuncs.c	/^void NSNprint(int verbosity,const char *fmt,...)$/;"	f
+NetworkPoller	src/NetworkStateNotifier.c	/^int NetworkPoller(SNetworkPollerParams *params)$/;"	f
+OPTSTRING	src/NetworkStateNotifier.c	70;"	d	file:
+QUIET_VERBOSITY	src/nsn_printfuncs.h	/^    QUIET_VERBOSITY=10,$/;"	e	enum:Everbosity
+ROUTEADD_CMD	src/nsn_commandlauncher.h	57;"	d
+ROUTEDEL_CMD	src/nsn_commandlauncher.h	56;"	d
+SNSNcommandlist	src/nsn_commandlauncher.h	/^typedef struct SNSNcommandlist$/;"	s
+SNSNcommandlist	src/nsn_commandlauncher.h	/^}SNSNcommandlist;$/;"	t	typeref:struct:SNSNcommandlist
+SNetworkPollerParams	src/NetworkStateNotifier.c	/^typedef struct SNetworkPollerParams$/;"	s	file:
+SNetworkPollerParams	src/NetworkStateNotifier.c	/^}SNetworkPollerParams;$/;"	t	typeref:struct:SNetworkPollerParams	file:
+SRC	Makefile	/^SRC=src\/NetworkStateNotifier.c src\/nsn_printfuncs.c src\/nsn_commandlauncher.c$/;"	m
+TGT	Makefile	/^TGT=bin\/nsn$/;"	m
+UNKNOWN	src/NetworkStateNotifier.c	/^const char *UNKNOWN="unknown";$/;"	v
+VERSION	src/NetworkStateNotifier.c	62;"	d	file:
+add_cmd	src/nsn_commandlauncher.c	/^static int add_cmd(SNSNcommandlist *head,char *cmd)$/;"	f	file:
+checkrun_addradd	src/nsn_commandlauncher.c	/^static void checkrun_addradd(struct nlmsghdr *netlinkreq)$/;"	f	file:
+checkrun_addrdel	src/nsn_commandlauncher.c	/^static void checkrun_addrdel(struct nlmsghdr *netlinkreq)$/;"	f	file:
+checkrun_linkadd	src/nsn_commandlauncher.c	/^static void checkrun_linkadd(struct nlmsghdr *netlinkreq)$/;"	f	file:
+checkrun_routeadd	src/nsn_commandlauncher.c	/^static void checkrun_routeadd(struct nlmsghdr *netlinkreq)$/;"	f	file:
+checkrun_routedel	src/nsn_commandlauncher.c	/^static void checkrun_routedel(struct nlmsghdr *netlinkreq)$/;"	f	file:
+command	src/nsn_commandlauncher.h	/^    char *command;$/;"	m	struct:SNSNcommandlist
+commandprocesses	src/nsn_commandlauncher.c	/^void commandprocesses(int commandsinstalled,struct nlmsghdr *nlmhdr)$/;"	f
+commandsinstalled	src/NetworkStateNotifier.c	/^    int commandsinstalled;$/;"	m	struct:SNetworkPollerParams	file:
+devtype	src/nsn_printfuncs.h	/^    int devtype;$/;"	m	struct:fileprintdev
+devtype	src/nsn_printfuncs.h	/^    int devtype;$/;"	m	struct:printdev
+errprfunc	src/nsn_printfuncs.h	/^    void (*errprfunc)(printdev *,const char *);$/;"	m	struct:fileprintdev
+errprfunc	src/nsn_printfuncs.h	/^    void (*errprfunc)(struct printdev*,const char *);$/;"	m	struct:printdev
+fdamnt	src/NetworkStateNotifier.c	/^    int fdamnt;$/;"	m	struct:SNetworkPollerParams	file:
+fds	src/NetworkStateNotifier.c	/^    int fds[10];$/;"	m	struct:SNetworkPollerParams	file:
+fileout_errprfunc	src/nsn_printfuncs.c	/^void fileout_errprfunc(printdev* _this_,const char *str)$/;"	f
+fileout_prfunc	src/nsn_printfuncs.c	/^void fileout_prfunc(printdev* _this_,const char *str)$/;"	f
+fileprintdev	src/nsn_printfuncs.h	/^typedef struct fileprintdev$/;"	s
+fileprintdev	src/nsn_printfuncs.h	/^}fileprintdev;$/;"	t	typeref:struct:fileprintdev
+fill_rtmtxt	src/NetworkStateNotifier.c	/^void fill_rtmtxt()$/;"	f
+fptr	src/nsn_printfuncs.h	/^    FILE *fptr;$/;"	m	struct:fileprintdev
+head	src/nsn_commandlauncher.h	/^    struct SNSNcommandlist *head;$/;"	m	struct:SNSNcommandlist	typeref:struct:SNSNcommandlist::SNSNcommandlist
+init_childhandling	src/nsn_commandlauncher.c	/^int init_childhandling(int fdamnt,int *fds)$/;"	f
+init_cmdlists	src/nsn_commandlauncher.c	/^void init_cmdlists()$/;"	f
+init_fileout	src/nsn_printfuncs.c	/^static printdev *init_fileout(FILE *fptr,int *fd)$/;"	f	file:
+init_stdout	src/nsn_printfuncs.c	/^static printdev *init_stdout()$/;"	f	file:
+install_addradd_command	src/nsn_commandlauncher.c	/^int install_addradd_command(char *cmd)$/;"	f
+install_addrdel_command	src/nsn_commandlauncher.c	/^int install_addrdel_command(char *cmd)$/;"	f
+install_linkadd_command	src/nsn_commandlauncher.c	/^int install_linkadd_command(char *cmd)$/;"	f
+install_linkdel_command	src/nsn_commandlauncher.c	/^int install_linkdel_command(char *cmd)$/;"	f
+install_routeadd_command	src/nsn_commandlauncher.c	/^int install_routeadd_command(char *cmd)$/;"	f
+install_routedel_command	src/nsn_commandlauncher.c	/^int install_routedel_command(char *cmd)$/;"	f
+isopen	src/nsn_printfuncs.h	/^    int isopen;$/;"	m	struct:fileprintdev
+long_options	src/NetworkStateNotifier.c	/^static struct option long_options[] =$/;"	v	typeref:struct:option	file:
+main	src/NetworkStateNotifier.c	/^int main(int argc, char *argv[])$/;"	f
+main	testscripts/test.c	/^int main(int argc, char *argv[])$/;"	f
+multicastgrps	src/NetworkStateNotifier.c	/^    int multicastgrps;$/;"	m	struct:SNetworkPollerParams	file:
+next	src/nsn_commandlauncher.h	/^    struct SNSNcommandlist *next;$/;"	m	struct:SNSNcommandlist	typeref:struct:SNSNcommandlist::SNSNcommandlist
+prev	src/nsn_commandlauncher.h	/^    struct SNSNcommandlist *prev;$/;"	m	struct:SNSNcommandlist	typeref:struct:SNSNcommandlist::SNSNcommandlist
+prfunc	src/nsn_printfuncs.h	/^    void (*prfunc)(printdev *,const char *);$/;"	m	struct:fileprintdev
+prfunc	src/nsn_printfuncs.h	/^    void (*prfunc)(struct printdev*,const char *);$/;"	m	struct:printdev
+print_addr_attrs	src/NetworkStateNotifier.c	/^static void  print_addr_attrs(struct nlmsghdr *netlinkreq)$/;"	f	file:
+print_attr	src/NetworkStateNotifier.c	/^void print_attr(char *attrtext,short type, short len, void *data)$/;"	f
+print_gen_attrs	src/NetworkStateNotifier.c	/^static void print_gen_attrs(struct nlmsghdr *netlinkreq)$/;"	f	file:
+print_if_attrs	src/NetworkStateNotifier.c	/^static void  print_if_attrs(struct nlmsghdr *netlinkreq)$/;"	f	file:
+print_if_del_attrs	src/NetworkStateNotifier.c	/^static void print_if_del_attrs(struct nlmsghdr *netlinkreq)$/;"	f	file:
+print_neigh_attrs	src/NetworkStateNotifier.c	/^static void  print_neigh_attrs(struct nlmsghdr *netlinkreq)$/;"	f	file:
+print_nl_msg	src/NetworkStateNotifier.c	/^static void print_nl_msg(struct nlmsghdr *netlinkreq)$/;"	f	file:
+print_rt_attrs	src/NetworkStateNotifier.c	/^static void  print_rt_attrs(struct nlmsghdr *netlinkreq)$/;"	f	file:
+print_usage	src/NetworkStateNotifier.c	/^static void print_usage()$/;"	f	file:
+printdev	src/nsn_printfuncs.h	/^typedef struct printdev$/;"	s
+printdev	src/nsn_printfuncs.h	/^}printdev;$/;"	t	typeref:struct:printdev
+rtmtxt	src/NetworkStateNotifier.c	/^const char *rtmtxt[RTM_MAX];$/;"	v
+rtmtxtInited	src/NetworkStateNotifier.c	/^static int rtmtxtInited=0;$/;"	v	file:
+run_command	src/nsn_commandlauncher.c	/^static void run_command(char *interpreter, char *interpretparam,char *cmd)$/;"	f	file:
+set_relative_logtimes	src/nsn_printfuncs.c	/^int set_relative_logtimes()$/;"	f
+setverbosity	src/nsn_printfuncs.c	/^int setverbosity(Everbosity verb)$/;"	f
+start_fileout	src/nsn_printfuncs.c	/^int start_fileout(char *filename,int *fd)$/;"	f
+start_stdout	src/nsn_printfuncs.c	/^int start_stdout()$/;"	f
+stdout_errorprfunc	src/nsn_printfuncs.c	/^void stdout_errorprfunc(printdev*_this,const char *str)$/;"	f
+stdout_prfunc	src/nsn_printfuncs.c	/^void stdout_prfunc(printdev*_this,const char *str)$/;"	f

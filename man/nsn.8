@@ -1,0 +1,139 @@
+.TH nsn 8 "04 June 2012" "v0.2 - Fall of Rome"
+.SH NAME
+nsn - Network Status Notifier
+.SH SYNOPSIS
+.B nsn 
+[
+.B -tbvVqh?q
+] [
+.B-s 
+.I eventtype
+] [
+.B -f
+.I logfile
+] [
+.B -l --link-down-command
+.I command
+] [
+.B -L --link-up-command
+.I command
+] [
+.B -a --addr-removed-command
+.I command
+] [
+.B -A --addr-added-command
+.I command
+] [
+.B -r --route-removed-command
+.I command
+] [
+.B -R --route-added-command
+.I command
+]
+
+
+.SH DESCRIPTION
+.BR "nsn" "(8) is a network status monitoring tool. It does listening changes in network configuration using netlink sockets, and prints informative messages to console or log file. " "nsn" "(8) was written to be used as debug tool with network problems. It can also serve as simple example code for using netlink sockets to listen network changes.
+ 
+
+.RB "As of version 0.2 it supports executing command when route/address/interface state changes. Nsn uses 'de facto' " "fork" "(2) and " "exec" "(3) method to execute commands as new processes. See " "-l -L -a -A -r -R" " OPTIONS below for further details."
+
+.SH OPTIONS
+.TP
+.B -s
+one of following event types we wish to monitor. It is possible to specify multiple events by specifying multiple 
+.B -s 
+options
+.TP 
+.B Supported suboptions for -s
+
+.B route4  
+.R Listens IPv4 routing table changes
+
+.B route6
+.R Listens IPv6 routing table changes
+
+.B addr6
+.R Listens for IPv6 address changes
+
+.B link6
+.R Listens for changes in IPv6 interfaces
+
+.B rule6
+.R Listens for IPv6 rules
+
+.B neigh
+.R Listens for changes in neighbour cache (arp/ndp)
+
+.R By default changes in IPv4 routes and interfaces are listened.
+
+
+.TP
+.B -f
+followed by name of log file. Enables logging to file. 
+.TP
+.B -t
+.rB "Use timestamps relative to program startup. Note, version 0.1 used " "-r" " for this purpose."
+.TP
+.B -b
+Start at background
+
+.TP
+.B -l --link-down-command, -L --link-up-command
+.BR "-l" " and " "-L" " install commands to be executed when link flags " "IFF_UP/IFF_RUNNING" " changes. (see " "<linux/if.h>" ") When " "nsn" " calls command it passes interface index number " "ifi_index" ", interface address family (like " "AF_INET" " or " "AF_INET6" ") and interface name " "IFLA_IFNAME" " as ascii string (if available) as arguments to command. If interface name is not available, nsn shall pass space character followed by NULL byte as ifname. All arguments are delivered exactly as " "netlink" " hands tem to nsn, nsn performs no checking for these parameters (except for existance of ifname)."
+.TP
+.B -a --addr-removed-command, -A --addr-added-command
+.BR "-a" " and " "-A" " install commands to be executed when address is added / removed from interface. Interface index for interface to which address was bound, address family like " "AF_INET" " or " "AF_INET6" " and prefix lenght of address are given as parameters to command. Also the address is given as last parameter (if available) If address is not available, zero is passed instead of address. See " "rtnetlink" "(7) for more accurate explanation of these parameters"
+.TP
+.B -r --route-removed-command, -R --route-added-command
+.BR "-r" " and " "-R" " install commands to be executed when route is added / removed from routing tables. Address family, destination (if available) and destination lenght (in format xxx/len), routing table, route type, gateway address and source address are given as parameters to command being executed. If destination is not given (like may be for default gateway), zero is given as destination. Similarly if gateway or source addresses are not given, zero is passed as missing address to program being called. See " "rtnetlink" "(7) for more accurate explanation of these parameters"
+
+
+
+.TP 
+.B Supported suboptions for -s
+
+.B route4  
+.R Listens IPv4 routing table changes
+
+.B route6
+.R Listens IPv6 routing table changes
+
+.B addr6
+.R Listens for IPv6 address changes
+
+.B link6
+.R Listens for changes in IPv6 interfaces
+
+
+
+.TP
+.B -V
+Verbose, print details from nlmsgs
+.TP
+.B -q
+Quiet, print only errors.
+.TP
+.B -v
+display version and exit
+.TP
+.B -h
+display help and exit
+.TP
+.B -?
+display help and exit
+
+.SH FILES
+.I N/A
+.RS
+N/A
+.RE
+.SH BUGS
+.TP
+.B Version 0.2 - Fall of Rome
+The event notifications should not be interpreted as absolute state information, since monitored state may change again between kernel sending notification of change, and nsn calling your program. So information nsn passes may not be valid anymore. However it is guaranteed that change really has happened, and if new changes have happened after that, nsn will fire your command again.
+
+Please inform all new bugs to Mazziesaccount@gmail.com
+.SH AUTHOR
+Matti Vaittinen <Mazziesaccount@gmail.com> For license information see LICENSE file in package root.
+
