@@ -1,0 +1,94 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<HTML> <HEAD> 
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<META NAME="Author" CONTENT="Matti Vaittinen">
+<META NAME="Description" CONTENT="nsn - network status notifier">
+<META NAME="Keywords" CONTENT="nsn, network, status, notify, change, link, state, route, ip, address, execute, command, script, netlink">
+<META NAME="Language" CONTENT="EN">
+<META NAME="Abstract" CONTENT="nsn - network status notifier">
+<META NAME="Designer" CONTENT="Matti Vaittinen">
+<META NAME="Distribution" CONTENT="Global">  
+<META NAME="Robots" CONTENT="All">  
+<!--<LINK REL="SHORTCUT ICON" HREF="http://www.student.oulu.fi/~mavaitti/images/av2.ico"> -->
+<LINK REL="stylesheet" TYPE="text/css" href="style/nsn.css">   
+<TITLE>nsn - network status notifier/TITLE>  
+</HEAD>     
+<body> 
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2999778840133894";
+/* banneri */
+google_ad_slot = "1226030022";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<center><h1 class="header">nsn - network status notifier</h1></center>
+<br />
+<h3 class="header2">What is nsn</h3>
+<p class="normal_chapter">
+nsn is a tool written for reporting changes in network interfaces. Nsn can be used to monitor changes in
+<ul>
+<li>interfaces</li>
+<li>addresses</li>
+<li>routes</li>
+<li>neighbor cache</li>
+<li>rules</li>
+</ul>
+
+and possibly some other network stack related features. Nsn can also be used to execute commands when state changes are observed. 
+<p class="normal_chapter">
+Nsn is written in c, and usees netlink sockets to receive change notifications from kernel. Its sources are written so they can be used as simple netlink socket usage example.
+
+<h3 class="header2">Versions to download</h3>
+<p class="normal_chapter">
+12.09.2012 - Created version 0.2-1 which performs some checks for compatibility at compile time => does not require such state of the art kernel to compile. Also compiled against older kernel to make static binary work with older kernels. <br />
+Downlad<a href="http://xp-dev.com/svn/nsn/branches/nsn_0.2-1.tar.gz">nsn_0.2-1.tar.gz</a> <br />
+28.08.2012 - I added version 0.2 as a downloadable tarball. It contains sources and a statically linked binary for x86. NOTE: NSN requires pretty new linux kernel to operate.<br />
+Downlad<a href="http://xp-dev.com/svn/nsn/branches/nsn_0.2.tar.gz">nsn_0.2.tar.gz"</a> <br />
+
+<p class="normal_chapter">
+Development version of nsn can be obtained from <a href="https://github.com/M-a-z/nsn">github</a> 
+
+<h3 class="header2">Compilation</h3>
+<p class="normal_chapter">
+Compilation should be easy. Just go to folder where Makefile resides and type
+<p class="command_example">
+make 
+<p class="normal_chapter">
+which builds the binary and optionally 
+<p class="command_example">
+make install 
+<p class="normal_chapter">
+which generates man pages and installs binaries to system folder. NSN really depends only on librt (for getting accurate timings for events) and compilation should thus be fairly painless. In case you find any problems, just give me a nudge =) Oh, I keep forgetting -static flag in Makefile. If you fail with linking, please try changing line
+<p class="command_example">
+LDFLAGS=-lrt -static
+<p class="normal_chapter">
+to
+<p class="command_example">
+LDFLAGS=-lrt
+<p class="normal_chapter">
+NOTE: This is still development version, thus it may not be bugfree.<br /> 
+<a href="http://maz-programmersdiary.blogspot.fi/2012/06/nsn-man-page.html">Man page</a> also available online.
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+
+
+
+
+<p class="footer">
+Matti 'Maz'  Vaittinen, Oulu, FINLAND email: mazziesaccount@gmail.com
+</body>
+</html>
