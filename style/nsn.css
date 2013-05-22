@@ -19,6 +19,11 @@ div.version_history{
 .command_example{
 font-family:Bookman Old Style, Century, Times New Roman; color:#FF6633; font-size:10pt; Vertical-Align:text-top;
 }
+.other_projects{
+font-family:Bookman Old Style, Century, Times New Roman; color:#FF6633; font-size:12pt; Vertical-Align:text-top;
+}
+
+
 .header{
 font-variant:small-caps; color:white; font-weight:bold; border-top:1px solid white; border-right:1px solid black; border-bottom:2px solid white; border-left:1px solid black;
 }
