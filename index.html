@@ -1,4 +1,6 @@
-
+---
+  layout: dummy
+---
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <HTML> <HEAD> 
 <META http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
@@ -13,37 +15,10 @@
 <!--<LINK REL="SHORTCUT ICON" HREF="http://www.student.oulu.fi/~mavaitti/images/av2.ico"> -->
 <LINK REL="stylesheet" TYPE="text/css" href="style/nsn.css">   
 <TITLE>nsn - network status notifier</TITLE>  
-
-
-
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-8629995-3', 'm-a-z.github.io');
-  ga('send', 'pageview');
-
-</script>
-
-
-
+{% include google_analytics.html %}
 </HEAD>     
 <body> 
-
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2999778840133894";
-/* banneri */
-google_ad_slot = "1226030022";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
+{% include ad_banner.html %}
 <center><h1 class="header">nsn - network status notifier</h1></center>
 <br>
 <h3 class="header2">What is nsn</h3>
@@ -63,7 +38,7 @@ Nsn is written in c, and usees netlink sockets to receive change notifications f
 
 <h3 class="header2">Versions to download</h3>
 <p class="normal_chapter">
-12.09.2012 - Created version 0.2-1 which performs some checks for compatibility at compile time => does not require such state of the art kernel to compile. Also compiled against older kernel to make static binary work with older kernels. <br>
+12.09.2012 - Created version 0.2-1 which performs some checks for compatibility at compile time =&gt; does not require such state of the art kernel to compile. Also compiled against older kernel to make static binary work with older kernels. <br>
 Downlad<a href="http://xp-dev.com/svn/nsn/branches/nsn_0.2-1.tar.gz">nsn_0.2-1.tar.gz</a> <br>
 28.08.2012 - I added version 0.2 as a downloadable tarball. It contains sources and a statically linked binary for x86. NOTE: NSN requires pretty new linux kernel to operate.<br>
 Downlad<a href="http://xp-dev.com/svn/nsn/branches/nsn_0.2.tar.gz">nsn_0.2.tar.gz"</a> <br>
@@ -91,37 +66,6 @@ LDFLAGS=-lrt
 <p class="normal_chapter">
 NOTE: This is still development version, thus it may not be bugfree.<br> 
 <a href="http://maz-programmersdiary.blogspot.fi/2012/06/nsn-man-page.html">Man page</a> also available online.
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-
-
-
-
-
-<p class="other_projects">
-See also my other projects:<br>
-<a href="http://m-a-z.github.io/thongs/">thongs - raw ethernet packet sniffer/generator</a> |
-<a href="http://m-a-z.github.io/nibbles/">nibbles - UDP print listener</a> |
-<a href="http://m-a-z.github.io/epb/">epb - Ethernet Packet Bombardier</a> 
-<p class="footer">
-Matti 'Maz'  Vaittinen, Oulu, FINLAND email: mazziesaccount@gmail.com
-<p>
-<b>Liked this program?</b> <br><i>Donate to help me spend more time developing these =)</i><br>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="K5ULTZQSUMWC2">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
-</form>
-<p>
-    <a href="http://validator.w3.org/check?uri=referer"><img
-      src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88"></a>
-  </p>
-
+{% include footer.html %}
 </body>
 </html>
