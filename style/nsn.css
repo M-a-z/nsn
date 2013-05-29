@@ -5,18 +5,40 @@
   font-family: sans;
   margin: 50px;
  }
+
+A:active {color:white;text-decoration:none}
+A:link {color:#0099ff;text-decoration:none}
+A:visited {color:#900090;text-decoration:none}
+A:hover {color:white;text-decoration:underline}
+
+/* This is what most chapters are */
+/* This could perhaps be the body defaults? */
 .normal_chapter{
 margin: 20px;
 }
 div.version_history{
     font-family:Bookman Old Style, Century, Times New Roman; color:yellow; font-size:10pt; text-align: center;
 }
-.normal_chapter A:active {color:white;text-decoration:none}
-.normal_chapter A:link {color:#0099ff;text-decoration:none}
-.normal_chapter A:visited {color:#900090;text-decoration:none}
-.normal_chapter A:hover {color:white;text-decoration:underline}
+
+/* menu on top */
+table.navbar{
+text-align: center; font-variant:small-caps; font-size:20pt; color:white; font-weight:bold; border-top:1px solid white; border-right:1px solid black; border-bottom:2px solid white; border-left:1px solid black; width:100%;
+}
+.navbar a:active {color:white;text-decoration:none}
+.navbar a:link {color:white;text-decoration:none}
+.navbar a:visited {color:white;text-decoration:none}
+.navbar a:hover {color:blue;text-decoration:none}
+/* top menu cell spacing in basic layout */
+.nav_cell{
+    padding-bottom:80px;
+}
+
+.tarball_list{
+margin: 20px;
+}
 
 .command_example{
+margin: 30px;
 font-family:Bookman Old Style, Century, Times New Roman; color:#FF6633; font-size:10pt; Vertical-Align:text-top;
 }
 .other_projects{
@@ -24,8 +46,8 @@ font-family:Bookman Old Style, Century, Times New Roman; color:#FF6633; font-siz
 }
 
 
-.header{
-font-variant:small-caps; color:white; font-weight:bold; border-top:1px solid white; border-right:1px solid black; border-bottom:2px solid white; border-left:1px solid black;
+h1{
+font-variant:small-caps; color:white; font-weight:bold; text-align: center;
 }
 .header2{
 font-variant:small-caps; color:white; font-weight:bold;
@@ -35,30 +57,5 @@ font-variant:small-caps; color:white; font-weight:bold;
 }
 p.footer{ background:#999999; font-family:courier; color:white; border-top:1px solid white; border-right:1px solid black; border-bottom:2px solid white; border-left:1px solid black; text-align: center; 
 }
-.indeksi{ 
-background:#000066; border-top:4px solid #f0f0f0; border-left:4px solid green; border-right:4px solid green; border-bottom:4px solid green; font-family:Bookman Old Style, Century, Times New Roman; color:#FF6633; font-size:10pt; Vertical-Align:text-top;
-}
-
-.indeksi A:active {color:black;text-decoration:none}
-.indeksi A:link {color:#0099ff;text-decoration:none}
-.indeksi A:visited {color:#900090;text-decoration:none}
-.indeksi A:hover {color:black;text-decoration:underline}
-.indeksi_ylaosa{
-background:#ffffff; border-bottom:4px solid #f0f0f0; border-left:4px solid green; border-right:4px solid green; border-top:4px solid green; font-family:Bookman Old Style, Century, Times New Roman; color:red; font-size:10pt;
-}
-.justify { text-align: justify; }
-.guestb { border:4px solid #777; font-family:arial; color:#ffffff; }
-.activator{ border:1px solid #ddd; }
-.noframe{ background:#ffffff; border-bottom:4px solid #f0f0f0; border-left:4px solid green; border-right:4px solid green; border-top:4px solid #f0f0f0; font-family:Bookman Old Style, Century, Times New Roman; color:red; font-size:10pt; }
-.noframe A:active {color:black;text-decoration:none}
-.noframe A:link {color:teal;text-decoration:none}
-.noframe A:visited {color:#900090;text-decoration:none}
-.noframe A:hover {color:black;text-decoration:underline}
-.indeksi_ylaosa A:active {color:black;text-decoration:none}
-.indeksi_ylaosa A:link {color:teal;text-decoration:none}
-.indeksi_ylaosa A:visited {color:#900090;text-decoration:none}
-.indeksi_ylaosa A:hover {color:black;text-decoration:underline}
-.htmltags{ text-align:left; font-size:130% }
-.htmlcell{ color:silver; border:1px solid silver; }
 
 --!>

@@ -1,0 +1,72 @@
+---
+  layout: basic
+  meta_description: Download nsn - network status notifier
+  meta_keywords: download, nsn, network, status, notify, change, link, state, route, ip, address, execute, command, script, netlink
+  css_file: style/nsn.css
+  title: Download nsn - network status notifier
+---
+
+<h1>Download nsn - network status notifier</h1>
+
+<h3 class="header2">Stable Tarballs</h3>
+
+<p class="normal_chapter">
+Following stable release tarballs are curretly available:
+
+<p class="tarball_list">
+12.09.2012 <a href="http://xp-dev.com/svn/nsn/branches/nsn_0.2-1.tar.gz">nsn_0.2-1.tar.gz</a> <br>
+28.08.2012 <a href="http://xp-dev.com/svn/nsn/branches/nsn_0.2.tar.gz">nsn_0.2.tar.gz"</a>
+
+
+<h3 class="header2">Development release:</h3>
+<p class="normal_chapter">
+Development version of nsn is found from <a href="https://github.com/M-a-z/nsn">github</a>.<br>
+It can also be fetched using git client by issuing command
+<p class="command_example">
+git clone https://github.com/M-a-z/nsn.git
+
+
+<h3 class="header2">Compilation and install</h3>
+<p class="normal_chapter">
+Compilation should be easy. Just go to folder where Makefile resides and type
+<p class="command_example">
+make 
+<p class="normal_chapter">
+which builds the binary and optionally 
+<p class="command_example">
+make install 
+<p class="normal_chapter">
+which generates man pages and installs binaries to system folder. NSN really depends only on librt (for getting accurate timings for events) and compilation should thus be fairly painless. In case you find any problems, just give me a nudge =) Oh, I keep forgetting -static flag in Makefile. If you fail with linking, please try changing line
+<p class="command_example">
+LDFLAGS=-lrt -static
+<p class="normal_chapter">
+to
+<p class="command_example">
+LDFLAGS=-lrt
+<p class="normal_chapter">
+NOTE: This is still development version, thus it may not be bugfree.<br> 
+
+<h3 class="header2">Brief history of nsn</h3>
+
+<div class="version_history">
+<h4>0.2-1 Fall Of The Rome - Fixup1</h4>
+<ul>
+<li>some checks for supported kernel features (compiles on older kernel too)</li>
+<li>added bugreport email</li>
+</ul>
+
+<h4>0.2 Fall Of The Rome</h4>
+<ul>
+<li>updated man pages</li>
+<li>routing table change callbacks</li>
+<li>address add/del callbacks</li>
+<li>link state change callbacks</li>
+<li>long options support</li>
+</ul>
+<h4>0.1</h4>
+<ul>
+    <li>Initial release, just logging changes</li>
+</ul>
+</div>
+
+
