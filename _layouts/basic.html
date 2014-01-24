@@ -14,7 +14,11 @@
 {% include google_analytics.html %}
 </HEAD>     
 <body> 
-{% include ad_banner.html %}
+<table width="100%">
+<tr><td align="left">
+{% include ad_banner.html %}</td><td align="right">{% include ad_banner.html %}</td>
+</tr>
+</table>
 <table>
 <tr>
 <td class="nav_cell">{% include navbar.html %}
