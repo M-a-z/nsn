@@ -59,7 +59,7 @@
 #include "nsn_printfuncs.h"
 #include "nsn_commandlauncher.h"
 
-#define VERSION "0.3 - Rc"
+#define VERSION "0.3.01"
 #define MAINTAINERMAIL "Mazziesaccount@gmail.com"
 
 extern char *if_indextoname(unsigned ifindex, char *ifname);
