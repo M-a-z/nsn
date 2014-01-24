@@ -287,7 +287,7 @@ static void print_usage()
 static void print_if_del_attrs(struct nlmsghdr *netlinkreq)
 {
     struct rtattr *at;
-    int len=RTM_PAYLOAD(netlinkreq);
+    int len=IFLA_PAYLOAD(netlinkreq);
 
     for(at=RTM_RTA(( NLMSG_DATA(netlinkreq) )); RTA_OK(at,len);at=RTA_NEXT(at,len))
     {
@@ -300,7 +300,7 @@ static void  print_if_attrs(struct nlmsghdr *netlinkreq)
 {
     struct rtattr *at;
 //    int len2;
-    int len=RTM_PAYLOAD(netlinkreq);
+    int len=IFLA_PAYLOAD(netlinkreq);
     char ifname[IFNAMSIZ]={'\0'};
     int mtu=-1;
     int operstat=-1;
@@ -420,7 +420,7 @@ static void  print_if_attrs(struct nlmsghdr *netlinkreq)
 static void  print_addr_attrs(struct nlmsghdr *netlinkreq)
 {
     struct rtattr *at;
-    int len=RTM_PAYLOAD(netlinkreq);
+    int len=IFA_PAYLOAD(netlinkreq);
     char ifaceaddr[100]={'\0'};
     char bcastaddr[100]={'\0'};
     char addrprint[1000]={'\0'};
@@ -544,6 +544,9 @@ void print_attr(char *attrtext,short type, short len, void *data)
         }
     }
 }
+#if 0
+Issue 1: We cannot do this because we do not know the family specific header size if msg type is unknown
+
 static void print_gen_attrs(struct nlmsghdr *netlinkreq)
 {
      struct rtattr *at;
@@ -554,11 +557,12 @@ static void print_gen_attrs(struct nlmsghdr *netlinkreq)
         print_attr(NULL,at->rta_type,at->rta_len,RTA_DATA(at));
     }
 }
-
+#endif
+#define NEIGH_PAYLOAD(n) NLMSG_PAYLOAD((n),sizeof(struct ndmsg))
 static void  print_neigh_attrs(struct nlmsghdr *netlinkreq)
 {
     struct rtattr *at;
-    int len=RTM_PAYLOAD(netlinkreq);
+    int len=NEIGH_PAYLOAD(netlinkreq);
 
     for(at=RTM_RTA(( NLMSG_DATA(netlinkreq) )); RTA_OK(at,len);at=RTA_NEXT(at,len))
     {
@@ -781,7 +785,7 @@ static void  print_rt_attrs(struct nlmsghdr *netlinkreq)
 
 static void print_nl_msg(struct nlmsghdr *netlinkreq)
 {
-    void  (*print_attrs) (struct nlmsghdr *)=&print_gen_attrs;
+    void  (*print_attrs) (struct nlmsghdr *)= /* Issue 1: cant do this func &print_gen_attrs*/ NULL;
     char *actionstr=NULL;
     char *familystr=NULL;
     int getifname=1;
