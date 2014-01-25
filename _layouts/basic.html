@@ -14,19 +14,24 @@
 {% include google_analytics.html %}
 </HEAD>     
 <body> 
-<table width="100%">
-<tr><td align="left">
-{% include ad_banner.html %}</td><td align="right">{% include ad_banner.html %}</td>
-</tr>
-</table>
+{% include ad_banner.html %}
 <table>
 <tr>
 <td class="nav_cell">{% include navbar.html %}
 </tr>
 <tr>
 <td>
-
+{% include main_header.html %} 
+<table width="100%">
+<tr>
+<td align="left">
 {{ content }}
+</td>
+<td>
+{% include ad_tower.html %}
+</td>
+</tr>
+</table>
 </td>
 </tr>
 </table>
