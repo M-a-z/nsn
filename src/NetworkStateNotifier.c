@@ -967,7 +967,11 @@ struct ifinfomsg
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_flags)&IFF_UP) == IFF_UP)?"UP":"DOWN",
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_flags)&IFF_RUNNING) == IFF_RUNNING)?"RUNNING":"NOT OPERATIONAL",
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_flags)&IFF_LOWER_UP) == IFF_LOWER_UP)?"IFF_LOWER_UP":"LOWER_DOWN",
+#ifdef IFF_802_1Q_VLAN
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_flags)&IFF_802_1Q_VLAN) == IFF_802_1Q_VLAN)?"is":"is not"
+#else
+	"cant say if"
+#endif
                     );
                     NSNnormalPrint
                     (
@@ -975,7 +979,11 @@ struct ifinfomsg
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_change)&IFF_UP) == IFF_UP)?"CHANGED":"NOT CHANGED",
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_change)&IFF_RUNNING) == IFF_RUNNING)?"CHANGED":"NOT CHANGED",
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_change)&IFF_LOWER_UP) == IFF_LOWER_UP)?"CHANGED":"NOT CHANGED",
+#ifdef IFF_802_1Q_VLAN
                         ((((unsigned int)((struct ifinfomsg *) NLMSG_DATA(netlinkreq) )->ifi_change)&IFF_802_1Q_VLAN) == IFF_802_1Q_VLAN)?"CHANGED":"NOT CHANGED"
+#else
+	"UNKNOWN"
+#endif
                     );
 
                 }
